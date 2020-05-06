@@ -14,6 +14,27 @@
 </div>
 
 <script>
+  Vue.filter('addYear', function(value) {   
+    if(value !="") {
+      value = value +"年";
+    }
+    return value;
+  })
+
+  Vue.filter('addMonth', function(value) {   
+    if(value !="") {
+      value = value +"月";
+    }
+    return value;
+  })
+
+  Vue.filter('addDate', function(value) {   
+    if(value !="") {
+      value = value +"日";
+    }
+    return value;
+  })
+  
   Vue.component('month-menu',{
     props:['year','month'],
     template:`<button>{{year}}年{{ month }}月</button><br>`
